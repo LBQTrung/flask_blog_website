@@ -1,13 +1,12 @@
-from flask import Flask, jsonify
 import os
+from app import create_app, db
+from app.models import User
+from flask_migrate import Migrate
 
-app = Flask(__name__)
+app = create_app(os.getenv("FLASK_CONFIG") or "default")
+migrate = Migrate(app, db)
 
 
-@app.route('/')
-def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
-
-
-if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+if __name__ == "__main__":
+    with app.app_context():
+        app.run(debug=True, port=os.getenv("PORT", default=5000))

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Login page</h1>
+    <form action="{{ url_for('auth.login') }}" method="POST">
+        <button type="submit" class="btn btn-primary">
+            Sign in with Google
+        </button>
+    </form>
+</div>
+{% endblock %}

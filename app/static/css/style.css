@@ -1,0 +1,49 @@
+div.flask-pagedown-preview {
+    margin: 10px 0px 10px 0px;
+    padding: 4px;
+}
+.posts, .comments {
+    list-style: none;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.post, .comment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.post:hover, .comment:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.post .post-content, .comment .comment-content {
+    margin: 0 10px;
+}
+
+.post .profile-thumbnail, .comment-thumbnail {
+    display: flex;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: block;
+}
+
+.button-group {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.post-tab-list {
+    margin-bottom: 20px;
+}

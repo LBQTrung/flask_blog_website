@@ -191,8 +191,8 @@ class User(UserMixin, db.Model):
     def add_self_follows():
         for user in User.query.all():
             if not user.is_following(user):
-                db.session.add(user)
                 user.follow(user)
+                db.session.add(user)
                 db.session.commit()
 
     def __init__(self, **kwargs):

@@ -198,7 +198,7 @@ class User(UserMixin, db.Model):
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)
 
-        self.followed = self.follow(self)
+        self.followed.append(Follow(followed=self))
         if self.role is None:
             if self.email == current_app.config["FLASKY_ADMIN"]:
                 self.role = Role.query.filter_by(permissions=0xFF).first()

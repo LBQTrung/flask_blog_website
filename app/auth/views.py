@@ -91,7 +91,6 @@ def callback():
         new_session = Session()
         user = User(email=user_email, name=user_name, avatar_url=user_avatar)
         db.session.add(user)
-        db.session.commit()
 
     user.avatar_url = user_avatar
     db.session.commit()

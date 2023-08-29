@@ -7,7 +7,6 @@ from oauthlib.oauth2 import WebApplicationClient
 from app.models import User
 from app import db
 import os
-from sqlalchemy.orm import sessionmaker
 
 # Read from app/client_secret.json
 json_path = os.path.join(os.path.dirname(__file__), "..", "client_secret.json")
@@ -88,7 +87,6 @@ def callback():
 
     # Doesn't exist? Add it to the database.
     if not user:
-        new_session = Session()
         user = User(email=user_email, name=user_name, avatar_url=user_avatar)
         db.session.add(user)
 

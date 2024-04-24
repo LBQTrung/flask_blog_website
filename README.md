@@ -1,6 +1,6 @@
 <p align="center">
   <br>
-  <img src="https://github.com/LBQTrung/X_social_media_nodejs/blob/main/img_for_readme/cover.png?raw=true"/>
+  <img src="https://github.com/LBQTrung/flask_blog_website/blob/main/img_for_readme/blog_website.gif?raw=true" alt="Blog website"/>
   <br/>
 </p>
 
@@ -13,82 +13,56 @@
   </a>
 </p>
 
-# Social Media Feature Clone Project
+# Flask Blog Website
 
-This project aims to replicate several key features of the popular social media platform X. Currently, it includes functionalities such as login, register, logout, verify-email, forgot-password, and follow. The project is built using TypeScript, Node.js, and MongoDB.
+A blog website is a platform for sharing information, knowledge, experiences, and other content through written articles. The project is built using Python, Flask, SQLite.
 
-## Features (Currently, Update soon)
+## Key Features
 
-- **Login:** Users can securely log into their accounts using their credentials.
-- **Register:** New users can create accounts by providing necessary information.
-- **Logout:** Users can securely log out of their accounts to end their session.
-- **Verify Email:** Email verification functionality ensures the authenticity of user accounts.
-- **Forgot Password:** Users can reset their passwords in case they forget them.
-- **Follow:** Users can follow other users to stay updated with their activities.
+- Users can log in using third-party accounts like Google..
+- Users can view and edit their profile information
+- Authors can easily create, edit, and delete posts
+- Readers can view comments, share posts, and comment on posts (if logged in)
+- Higher user levels like admins and moderators can moderate comments.
 
 ## Technologies Used
 
-- **TypeScript:** A superset of JavaScript that adds static typing to the language, enhancing code quality and maintainability.
-- **Node.js:** A JavaScript runtime environment that allows the execution of JavaScript code outside of a web browser.
-- **MongoDB:** A NoSQL database that provides scalability, flexibility, and performance for handling large volumes of data.
+- **Python:** A powerful and flexible programming language, widely used for web development, data science, artificial intelligence, and many other purposes.
+- **Flask:** A lightweight and flexible micro web framework for Python, enabling you to build web applications quickly and easily.
+
+- **SQLite:** A lightweight, serverless relational database management system, well-suited for small to medium-sized web applications.
 
 ## Setup Instructions
 
 1. **Clone the Repository:**
    ```bash
-   https://github.com/LBQTrung/X_social_media_nodejs.git
+   https://github.com/LBQTrung/flask_blog_website.git
    ```
-2. **Install Dependencies**
-   ```bash
-   cd X_social_media_nodejs
-   npm install
-   ```
-3. **Set up Environment Variables**
-
-   - Create a '.env' file in the root directory of the project
-   - Copy and paste the following variable into '.env' file:
+2. **Create and activate a virtual environment**
 
    ```bash
-   PORT=4000
-   HOST='your_production_host'
-   DB_USERNAME='your_username_of_database'
-   DB_PASSWORD='your_password_of_database'
-   DB_NAME='your_database_name'
-   DB_USERS_COLLECTION='users'
-   DB_REFRESH_TOKENS_COLLECTION='refresh_tokens'
-   DB_FOLLOWERS_COLLECTION='followers'
-   DB_TWEETS_COLLECTION='tweets'
-   DB_HASHTAGS_COLLECTION='hashtags'
+   # For Windows
+   python -m venv venv
+   venv\Scripts\activate
 
-   PASSWORD_SECRET='your_password_secret'
-   JWT_SECRET_ACCESS_TOKEN='your_jwt_secret_access_token'
-   JWT_SECRET_REFRESH_TOKEN='your_jwt_secret_refresh_token'
-   JWT_SECRET_EMAIL_VERIFY_TOKEN='your_jwt_email_verify_token'
-   JWT_SECRET_FORGOT_PASSWORD_TOKEN='your_jwt_secret_forgot_password_token'
-   ACCESS_TOKEN_EXPIRES_IN='15m'
-   REFRESH_TOKEN_EXPIRES_IN='100d'
-   EMAIL_VERIFY_TOKEN_EXPIRES_IN='7d'
-   FORGOT_PASSWORD_TOKEN_EXPIRES_IN='7d'
-
-   GOOGLE_CLIENT_ID='your_google_client_id'
-   GOOGLE_CLIENT_SECRET='your_google_client_secret'
-   GOOGLE_REDIRECT_URI='http://localhost:4000/user/oauth/google'
-   CLIENT_REDIRECT_CALLBACK='your_client_redirect_callback'
+   # For macOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
-4. **Start the Server (For developemnt environment)**
+3. **Install dependencies**
+
    ```bash
-   npm run dev
+   pip install -r requirements.txt
    ```
 
-## Notes
-
-- This is a basic clone, and more features can be developed
-- You need to configure MongoDB before running the application
-- This project is a non-commercial educational endeavor aimed at replicating select features from the social media platform Twitter. It follows an API-first approach and is intended solely for learning purposes.
-- Developers are encouraged to test the project's APIs using Postman or similar tools to ensure system stability and functionality.
+4. **Run the application (For developemnt environment)**
+   ```bash
+   flask run
+   ```
 
 ## Contributing
 
-If you encounter any issues during testing with Postman or need additional assistance, please contact us via [lebaquoctrung@gmail.com] or open an issue in the repository.
-Thank you for your interest in this project!
+We welcome contributions from the community! If you'd like to contribute to this project, please contact us at [lebaquoctrung@gmail.com](mailto:lebaquoctrung@gmail.com) for more information.
+
+Thank you for considering contributing to my project!
